@@ -19,15 +19,15 @@ export default function ProjectCard({ project }) {
         </div>
       </div>
 
-      <div className="flex flex-wrap items-center gap-1.5">
+      <div className="flex flex-nowrap overflow-x-auto gap-1.5 pb-0.5 scrollbar-none">
         {tools.map((t) => <TechBadge key={t} label={t} />)}
       </div>
 
-      <ul className="space-y-1.5">
+      <ul className="space-y-2">
         {results.map((r) => (
-          <li key={r} className="flex items-start gap-2 text-sm">
-            <span className="text-emerald-400 mt-0.5 shrink-0">✓</span>
-            <span className="text-slate-300">{r}</span>
+          <li key={r} className="grid grid-cols-[16px_1fr] gap-2 text-sm">
+            <span className="text-emerald-400 pt-0.5">✓</span>
+            <span className="text-slate-300 leading-relaxed">{r}</span>
           </li>
         ))}
       </ul>
