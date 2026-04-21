@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import TechBadge from "./TechBadge"
 
 export default function ArticleCard({ article }) {
   const { id, title, summary, date, tags, featured } = article
@@ -22,14 +23,9 @@ export default function ArticleCard({ article }) {
             {title}
           </h2>
           <p className="text-slate-400 text-sm leading-relaxed">{summary}</p>
-          <div className="flex flex-wrap gap-1.5 pt-1">
+          <div className="flex flex-wrap items-center gap-1.5 pt-1">
             {tags.map((t) => (
-              <span
-                key={t}
-                className="text-[11px] font-medium text-slate-500 bg-navy-800 border border-navy-700/60 px-2 py-0.5 rounded-md"
-              >
-                {t}
-              </span>
+              <TechBadge key={t} label={t} />
             ))}
           </div>
         </div>

@@ -40,7 +40,7 @@ export default function Contact() {
             rel="noopener noreferrer"
             className="group flex items-center gap-4 p-5 rounded-xl border border-navy-700/80 bg-navy-900 hover:border-sky-500/30 hover:shadow-card-hover transition-all duration-300"
           >
-            <span className="text-xs font-semibold text-slate-500 uppercase tracking-widest w-12 shrink-0">
+            <span className="text-xs font-semibold text-slate-500 uppercase tracking-widest w-20 shrink-0">
               {label}
             </span>
             <div className="min-w-0 flex-1">
