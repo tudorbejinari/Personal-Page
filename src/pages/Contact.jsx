@@ -3,39 +3,53 @@ const links = [
     label: "Email",
     value: "tudorwebsolutions@gmail.com",
     href: "mailto:tudorwebsolutions@gmail.com",
+    description: "Best for project inquiries and opportunities",
   },
   {
     label: "LinkedIn",
     value: "linkedin.com/in/tudor-bejinari",
     href: "https://linkedin.com/in/tudor-bejinari",
+    description: "Connect professionally",
   },
   {
     label: "GitHub",
     value: "github.com/tudorbejinari",
     href: "https://github.com/tudorbejinari",
+    description: "Code, projects, and contributions",
   },
 ]
 
 export default function Contact() {
   return (
-    <div className="max-w-3xl mx-auto px-6 py-24 space-y-10">
-      <div>
-        <h1 className="text-4xl font-bold text-white mb-3">Get In Touch</h1>
-        <p className="text-gray-400">
-          Open to QA roles, freelance projects, and conversations about testing + AI.
+    <div className="max-w-3xl mx-auto px-6 py-14 sm:py-20 space-y-10 sm:space-y-12">
+      <div className="space-y-3">
+        <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest">Contact</p>
+        <h1 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">Get In Touch</h1>
+        <p className="text-slate-400 leading-relaxed text-sm sm:text-base max-w-md">
+          Open to QA roles, consulting, and conversations about testing and AI.
+          I respond within 24 hours.
         </p>
       </div>
-      <div className="space-y-4">
-        {links.map(({ label, value, href }) => (
+
+      <div className="space-y-3">
+        {links.map(({ label, value, href, description }) => (
           <a
             key={label}
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-4 p-5 rounded-xl border border-gray-800 bg-gray-900 hover:border-gray-600 transition-colors group"
+            className="group flex items-center gap-4 p-5 rounded-xl border border-navy-700/80 bg-navy-900 hover:border-sky-500/30 hover:shadow-card-hover transition-all duration-300"
           >
-            <span className="text-sm text-gray-500 w-16 shrink-0">{label}</span>
-            <span className="text-white group-hover:text-blue-300 transition-colors">{value}</span>
+            <span className="text-xs font-semibold text-slate-500 uppercase tracking-widest w-12 shrink-0">
+              {label}
+            </span>
+            <div className="min-w-0 flex-1">
+              <p className="text-sm font-medium text-white group-hover:text-sky-300 transition-colors duration-200 truncate">
+                {value}
+              </p>
+              <p className="text-xs text-slate-600 mt-0.5 hidden sm:block">{description}</p>
+            </div>
+            <span className="text-slate-600 group-hover:text-sky-400 transition-colors duration-200 shrink-0">→</span>
           </a>
         ))}
       </div>

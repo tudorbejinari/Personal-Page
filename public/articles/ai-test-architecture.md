@@ -29,11 +29,11 @@ For exploratory testing? It has a place. As your test foundation? No.
 ┌─────────────────────────────────────────────────────┐
 │                   AI Agent Layer                     │
 │                                                      │
-│  ┌────────────┐  ┌────────────┐  ┌───────────────┐  │
-│  │ Senior QA  │  │  Debugger  │  │   Reviewer    │  │
-│  │   Agent    │  │   Agent    │  │   Agent       │  │
-│  │ (Builder)  │  │(Investigat)│  │ (Read-only)   │  │
-│  └─────┬──────┘  └─────┬──────┘  └───────┬───────┘  │
+│  ┌────────────┐  ┌────────────┐  ┌──────────────┐  │
+│  │ Senior QA  │  │  Debugger  │  │   Reviewer   │  │
+│  │   Agent    │  │   Agent    │  │    Agent     │  │
+│  │ (Builder)  │  │ (Diagnose) │  │ (Read-only)  │  │
+│  └─────┬──────┘  └─────┬──────┘  └──────┬───────┘  │
 ├────────┼───────────────┼─────────────────┼──────────┤
 │        ▼               ▼                 ▼          │
 │          Deterministic Playwright Test Suite        │
