@@ -42,7 +42,7 @@ export default function Contact() {
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-4 p-5 rounded-xl border border-navy-700/60 bg-navy-900 hover:border-sky-500/30 hover:shadow-card-hover transition-all duration-300"
+            className="group flex items-center gap-4 p-5 rounded-2xl border border-white/[0.06] glass  glass-hover transition-all duration-300"
           >
             <span className="text-xs font-semibold text-slate-500 uppercase tracking-widest w-20 shrink-0">
               {label}

@@ -6,30 +6,30 @@ export default function ArticleCard({ article }) {
   return (
     <Link
       to={`/articles/${id}`}
-      className={`group block rounded-xl border p-6 transition-all duration-300 ${
-        featured
-          ? "border-sky-500/25 bg-navy-900 hover:border-sky-400/50 hover:shadow-card-hover"
-          : "border-navy-700/60 bg-navy-900 hover:border-navy-600/80"
+      className={`group relative block rounded-2xl glass glass-hover p-6 overflow-hidden transition-all duration-300 ${
+        featured ? "border border-neon-blue/20" : "border border-white/[0.06]"
       }`}
     >
+      {featured && (
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-neon-blue/50 to-transparent" />
+      )}
+
       <div className="flex items-start justify-between gap-6">
         <div className="space-y-3 flex-1 min-w-0">
           {featured && (
-            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-semibold text-sky-300 bg-sky-500/10 border border-sky-500/25 uppercase tracking-wider">
+            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-semibold text-neon-blue bg-neon-blue/8 border border-neon-blue/20 uppercase tracking-wider">
               Featured
             </span>
           )}
-          <h2 className="text-base font-semibold text-white group-hover:text-sky-300 transition-colors duration-200 leading-snug">
+          <h2 className="text-base font-semibold text-white group-hover:text-neon-blue transition-colors duration-200 leading-snug">
             {title}
           </h2>
-          <p className="text-slate-400 text-sm leading-relaxed">{summary}</p>
+          <p className="text-slate-500 text-sm leading-relaxed">{summary}</p>
           <div className="flex flex-wrap items-center gap-1.5 pt-1">
-            {tags.map((t) => (
-              <TechBadge key={t} label={t} />
-            ))}
+            {tags.map((t) => <TechBadge key={t} label={t} />)}
           </div>
         </div>
-        <time className="text-xs text-slate-600 whitespace-nowrap mt-0.5 shrink-0">{date}</time>
+        <time className="text-[11px] text-slate-600 whitespace-nowrap mt-0.5 shrink-0">{date}</time>
       </div>
     </Link>
   )

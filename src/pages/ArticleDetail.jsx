@@ -42,7 +42,7 @@ export default function ArticleDetail() {
           {article.tags.map((t) => (
             <span
               key={t}
-              className="text-[11px] font-medium text-slate-500 bg-navy-800 border border-navy-700/60 px-2 py-0.5 rounded-md"
+              className="text-[11px] font-medium text-slate-500 bg-space-800 border border-white/[0.06] px-2 py-0.5 rounded-md"
             >
               {t}
             </span>
@@ -60,13 +60,13 @@ export default function ArticleDetail() {
         prose-p:text-slate-300 prose-p:leading-relaxed prose-p:my-4
         prose-a:text-sky-400 prose-a:no-underline hover:prose-a:text-sky-300
         prose-strong:text-white prose-strong:font-semibold
-        prose-code:text-sky-300 prose-code:bg-navy-800 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-normal prose-code:before:content-none prose-code:after:content-none
-        prose-pre:bg-navy-800 prose-pre:border prose-pre:border-navy-700/60 prose-pre:rounded-xl prose-pre:p-4 sm:prose-pre:p-5 prose-pre:overflow-x-auto
+        prose-code:text-neon-blue prose-code:bg-space-800 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-normal prose-code:before:content-none prose-code:after:content-none
+        prose-pre:bg-space-800 prose-pre:border prose-pre:border-white/[0.06] prose-pre:rounded-xl prose-pre:p-4 sm:prose-pre:p-5 prose-pre:overflow-x-auto
         prose-li:text-slate-300 prose-li:my-1
         prose-ul:my-4 prose-ol:my-4
-        prose-blockquote:border-l-sky-500 prose-blockquote:text-slate-400 prose-blockquote:not-italic
+        prose-blockquote:border-l-neon-blue prose-blockquote:text-slate-400 prose-blockquote:not-italic
         prose-table:text-sm prose-th:text-slate-300 prose-th:font-semibold prose-td:text-slate-400
-        prose-hr:border-navy-700/60
+        prose-hr:border-white/[0.06]
       ">
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
       </article>
