@@ -78,7 +78,7 @@ const education = [
   {
     title: "Certificate — Coding Boot Camp",
     institution: "University of Denver",
-    period: "6 months",
+    period: "Oct 2018 – May 2019",
     note: "HTML · CSS · Bootstrap · JavaScript · React · SQL · MongoDB · Node.js · Mocha · Chai · Postman",
   },
   {
