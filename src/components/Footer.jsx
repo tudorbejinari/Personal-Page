@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="border-t border-navy-700/60 mt-auto">
       <div className="max-w-5xl mx-auto px-6 py-8 flex flex-col sm:flex-row justify-between items-center gap-4">
         <span className="text-sm text-slate-500">
-          Tudor Bejinari — QA Automation Engineer & AI-Quality Specialist
+          Tudor Bejinari
         </span>
         <div className="flex items-center gap-6 text-sm text-slate-600">
           <Link to="/articles" className="hover:text-slate-400 transition-colors">Articles</Link>

@@ -27,8 +27,13 @@ const styleMap = {
 
 export default function Home() {
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden">
+      {/* Base hero gradient */}
       <div className="absolute inset-0 bg-hero-gradient pointer-events-none" />
+      {/* Ambient orbs */}
+      <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-sky-500/10 blur-[120px] pointer-events-none" />
+      <div className="absolute top-20 right-0 w-80 h-80 rounded-full bg-violet-500/8 blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-0 left-1/3 w-64 h-64 rounded-full bg-sky-400/6 blur-[80px] pointer-events-none" />
 
       <div className="relative max-w-5xl mx-auto px-6 pt-16 pb-20 sm:pt-24 sm:pb-32 space-y-16 sm:space-y-24">
 
@@ -40,9 +45,9 @@ export default function Home() {
           </div>
 
           <div className="space-y-4">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15] tracking-tight">
               QA Automation
-              <span className="block text-gradient-blue">Engineer</span>
+              <span className="block text-gradient-blue pb-2">Engineer</span>
             </h1>
             <p className="text-lg sm:text-xl text-slate-400 leading-relaxed font-light">
               API & UI testing specialist. I build reliable automated test systems

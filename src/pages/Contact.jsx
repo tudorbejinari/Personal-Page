@@ -22,13 +22,17 @@ const links = [
 export default function Contact() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-14 sm:py-20 space-y-10 sm:space-y-12">
-      <div className="space-y-3">
+      <div className="space-y-4">
         <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest">Contact</p>
         <h1 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">Get In Touch</h1>
         <p className="text-slate-400 leading-relaxed text-sm sm:text-base max-w-md">
           Open to QA roles, consulting, and conversations about testing and AI.
           I respond within 24 hours.
         </p>
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+          Available for opportunities
+        </div>
       </div>
 
       <div className="space-y-3">
@@ -38,7 +42,7 @@ export default function Contact() {
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-4 p-5 rounded-xl border border-navy-700/80 bg-navy-900 hover:border-sky-500/30 hover:shadow-card-hover transition-all duration-300"
+            className="group flex items-center gap-4 p-5 rounded-xl border border-navy-700/60 bg-navy-900 hover:border-sky-500/30 hover:shadow-card-hover transition-all duration-300"
           >
             <span className="text-xs font-semibold text-slate-500 uppercase tracking-widest w-20 shrink-0">
               {label}

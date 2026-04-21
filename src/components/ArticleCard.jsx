@@ -8,14 +8,14 @@ export default function ArticleCard({ article }) {
       to={`/articles/${id}`}
       className={`group block rounded-xl border p-6 transition-all duration-300 ${
         featured
-          ? "border-sky-500/25 bg-navy-900 hover:border-sky-400/40 hover:shadow-card-hover"
-          : "border-navy-700/80 bg-navy-900 hover:border-slate-600/60"
+          ? "border-sky-500/25 bg-navy-900 hover:border-sky-400/50 hover:shadow-card-hover"
+          : "border-navy-700/60 bg-navy-900 hover:border-navy-600/80"
       }`}
     >
       <div className="flex items-start justify-between gap-6">
         <div className="space-y-3 flex-1 min-w-0">
           {featured && (
-            <span className="inline-flex items-center text-[11px] font-semibold text-sky-400 uppercase tracking-widest">
+            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-semibold text-sky-300 bg-sky-500/10 border border-sky-500/25 uppercase tracking-wider">
               Featured
             </span>
           )}

@@ -121,7 +121,7 @@ export default function About() {
           ))}
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-4 max-w-2xl">
           <h2 className="text-2xl sm:text-3xl font-bold text-white leading-snug">
             I build automated test systems that are fast, reliable, and designed to scale —
             then I use AI to make them faster to build and easier to maintain.
@@ -157,8 +157,9 @@ export default function About() {
           {aiCards.map(({ title, body }) => (
             <div
               key={title}
-              className="rounded-xl border border-navy-700/60 bg-navy-900 p-5 space-y-2"
+              className="rounded-xl border border-navy-700/60 bg-navy-900 p-5 space-y-2 relative overflow-hidden"
             >
+              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-sky-500/40 via-violet-500/20 to-transparent" />
               <p className="text-sm font-semibold text-white">{title}</p>
               <p className="text-sm text-slate-400 leading-relaxed">{body}</p>
             </div>
@@ -207,7 +208,7 @@ export default function About() {
               <p className="text-sm font-semibold text-white leading-snug">{title}</p>
               <p className="text-sm text-slate-400">{institution}</p>
               <p className="text-xs text-slate-600">{period}</p>
-              {note && <p className="text-xs text-slate-600 pt-1 leading-relaxed">{note}</p>}
+              {note && <p className="text-xs text-slate-500 pt-1 leading-relaxed">{note}</p>}
             </div>
           ))}
         </div>
