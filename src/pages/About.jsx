@@ -1,10 +1,27 @@
-const tools = [
-  { category: "Test Frameworks", items: "Playwright · Cypress · TestComplete · Karate" },
-  { category: "Languages", items: "JavaScript · Node.js · SQL" },
-  { category: "API Testing", items: "Postman · Swagger · RESTful APIs" },
-  { category: "CI/CD", items: "Codefresh · Argo · GitHub Actions" },
-  { category: "AI Tools", items: "Cursor · Claude CLI · Devin.ai · GitHub Copilot" },
-  { category: "Dev Tools", items: "IntelliJ IDEA · Visual Studio · GitHub · GitKraken" },
+const specialties = [
+  "QA Automation",
+  "AI-Augmented Engineering",
+  "Playwright · Cypress · TestComplete",
+  "CI/CD · DevOps",
+]
+
+const aiCards = [
+  {
+    title: "Multi-agent test systems",
+    body: "Built pipelines where AI writes, debugs, and reviews Playwright tests end-to-end — not as a demo, as a daily workflow.",
+  },
+  {
+    title: "Visual regression analysis",
+    body: "Tooling where the Claude API compares UI states across environments and surfaces code fix suggestions automatically.",
+  },
+  {
+    title: "Daily force multipliers",
+    body: "Cursor, Claude CLI, Devin.ai, and GitHub Copilot — used as engineering judgment amplifiers, not autocomplete shortcuts.",
+  },
+  {
+    title: "The distinction that matters",
+    body: "I don't use AI to click around an app and hope for the best. I use it to build better test infrastructure.",
+  },
 ]
 
 const experience = [
@@ -78,55 +95,89 @@ const education = [
   },
 ]
 
+const tools = [
+  { category: "Test Frameworks", items: "Playwright · Cypress · TestComplete · Karate" },
+  { category: "Languages", items: "JavaScript · Node.js · SQL" },
+  { category: "API Testing", items: "Postman · Swagger · RESTful APIs" },
+  { category: "CI/CD", items: "Codefresh · Argo · GitHub Actions" },
+  { category: "AI Tools", items: "Cursor · Claude CLI · Devin.ai · GitHub Copilot" },
+  { category: "Dev Tools", items: "IntelliJ IDEA · Visual Studio · GitHub · GitKraken" },
+]
+
 export default function About() {
   return (
-    <div className="max-w-3xl mx-auto px-6 py-14 sm:py-20 space-y-14 sm:space-y-16">
+    <div className="max-w-3xl mx-auto px-6 py-14 sm:py-20 space-y-16 sm:space-y-20">
 
-      <div className="space-y-3">
-        <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest">About</p>
-        <h1 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">About Me</h1>
-      </div>
+      {/* Hero intro */}
+      <section className="space-y-8">
+        <div className="flex flex-wrap gap-2">
+          {specialties.map((s) => (
+            <span
+              key={s}
+              className="px-3 py-1 rounded-full text-xs font-medium bg-navy-800 border border-navy-700/60 text-slate-400"
+            >
+              {s}
+            </span>
+          ))}
+        </div>
 
-      <div className="space-y-5 text-slate-300 leading-relaxed text-sm sm:text-base">
-        <p>
-          I'm a QA Automation Engineer and AI-augmented quality specialist. I build automated
-          test systems that are fast, reliable, and designed to scale — then I use AI to make
-          them faster to build and easier to maintain. Quality isn't a phase in my workflow.
-          It's the foundation everything else is built on.
+        <div className="space-y-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white leading-snug">
+            I build automated test systems that are fast, reliable, and designed to scale —
+            then I use AI to make them faster to build and easier to maintain.
+          </h2>
+          <p className="text-slate-400 text-sm sm:text-base font-medium">
+            Quality isn't a phase in my workflow. It's the foundation everything else is built on.
+          </p>
+        </div>
+
+        <div className="space-y-4 text-slate-400 text-sm sm:text-base leading-relaxed">
+          <p>
+            I've worked across the full testing spectrum — functional, integration, regression,
+            and exploratory — on everything from front-end Angular applications to complex
+            back-end financial systems. My core is JavaScript and Node.js automation using
+            Playwright, Cypress, and TestComplete, with deep API testing experience through
+            Postman, Swagger, and the Karate Framework.
+          </p>
+          <p>
+            On the infrastructure side, I integrate automation directly into CI/CD pipelines with
+            Codefresh and Argo — working alongside DevOps so quality gates are part of every
+            deployment, not bolted on after the fact. Solid grounding in SQL, RESTful APIs, and
+            RDBMS concepts means I'm equally effective testing front-end interfaces and back-end services.
+          </p>
+        </div>
+      </section>
+
+      {/* How I apply AI */}
+      <section className="space-y-6">
+        <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest">
+          How I apply AI — specifically
         </p>
-        <p>
-          I've worked across the full testing spectrum — functional, integration, regression,
-          and exploratory — on everything from front-end Angular applications to complex
-          back-end financial systems. I specialize in JavaScript and Node.js automation using
-          Playwright, Cypress, and TestComplete, with deep API testing experience through
-          Postman, Swagger, and the Karate Framework.
-        </p>
-        <p>
-          On the infrastructure side, I integrate automation directly into CI/CD pipelines
-          using Codefresh and Argo, working closely with DevOps teams to make quality gates
-          part of every deployment — not an afterthought. I have solid grounding in SQL,
-          RESTful APIs, and RDBMS concepts, and I'm equally comfortable testing front-end
-          interfaces and back-end services.
-        </p>
-        <p>
-          What sets my work apart is how I apply AI. I don't use it to click around an app
-          and hope for the best — I use it to build better test infrastructure. I've built
-          multi-agent systems where AI writes, debugs, and reviews Playwright tests, and
-          tools where the Claude API performs visual regression analysis and suggests code
-          fixes automatically. I use Cursor, Claude CLI, Devin.ai, and GitHub Copilot daily —
-          not as shortcuts, but as force multipliers for engineering judgment.
-        </p>
-        <p>
-          My goal is to operate at the intersection of QA, automation engineering, and AI —
-          where 10x impact is achievable without sacrificing the determinism and reliability
-          that make tests worth running.
-        </p>
-      </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {aiCards.map(({ title, body }) => (
+            <div
+              key={title}
+              className="rounded-xl border border-navy-700/60 bg-navy-900 p-5 space-y-2"
+            >
+              <p className="text-sm font-semibold text-white">{title}</p>
+              <p className="text-sm text-slate-400 leading-relaxed">{body}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="rounded-xl border border-sky-500/20 bg-sky-500/5 px-6 py-5">
+          <p className="text-base sm:text-lg font-medium text-slate-200 leading-relaxed">
+            My goal is to operate at the intersection of QA, automation engineering, and AI —
+            where 10x impact is achievable without sacrificing the determinism and reliability
+            that make tests worth running.
+          </p>
+        </div>
+      </section>
 
       {/* Work Experience */}
       <section className="space-y-5">
         <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest">Work Experience</p>
-        <div className="space-y-6">
+        <div className="space-y-4">
           {experience.map(({ company, type, location, roles }) => (
             <div key={company} className="rounded-xl border border-navy-700/60 bg-navy-900 p-5 space-y-4">
               <div>
