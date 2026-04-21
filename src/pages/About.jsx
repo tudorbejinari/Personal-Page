@@ -114,7 +114,7 @@ export default function About() {
           {specialties.map((s) => (
             <span
               key={s}
-              className="px-3 py-1 rounded-full text-xs font-medium bg-space-900 border border-white/[0.06] text-slate-400"
+              className="px-3 py-1 rounded-full text-xs font-medium bg-navy-800 border border-navy-700/60 text-slate-400"
             >
               {s}
             </span>
@@ -157,7 +157,7 @@ export default function About() {
           {aiCards.map(({ title, body }) => (
             <div
               key={title}
-              className="rounded-2xl border border-white/[0.06] glass p-5 space-y-2 relative overflow-hidden"
+              className="rounded-xl border border-navy-700/60 bg-navy-900 p-5 space-y-2 relative overflow-hidden"
             >
               <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-sky-500/40 via-violet-500/20 to-transparent" />
               <p className="text-sm font-semibold text-white">{title}</p>
@@ -166,7 +166,7 @@ export default function About() {
           ))}
         </div>
 
-        <div className="rounded-2xl border border-neon-blue/20 bg-neon-blue/5 px-6 py-5">
+        <div className="rounded-xl border border-sky-500/20 bg-sky-500/5 px-6 py-5">
           <p className="text-base sm:text-lg font-medium text-slate-200 leading-relaxed">
             My goal is to operate at the intersection of QA, automation engineering, and AI —
             where 10x impact is achievable without sacrificing the determinism and reliability
@@ -180,14 +180,14 @@ export default function About() {
         <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest">Work Experience</p>
         <div className="space-y-4">
           {experience.map(({ company, type, location, roles }) => (
-            <div key={company} className="rounded-2xl border border-white/[0.06] glass p-5 space-y-4">
+            <div key={company} className="rounded-xl border border-navy-700/60 bg-navy-900 p-5 space-y-4">
               <div>
                 <p className="text-sm font-semibold text-white">{company}</p>
                 <p className="text-xs text-slate-500 mt-0.5">{type} · {location}</p>
               </div>
               <div className="space-y-3">
                 {roles.map(({ title, period, skills }) => (
-                  <div key={title} className="pl-3 border-l border-neon-blue/25 space-y-0.5">
+                  <div key={title} className="pl-3 border-l border-sky-500/30 space-y-0.5">
                     <p className="text-sm font-medium text-slate-200">{title}</p>
                     <p className="text-xs text-slate-500">{period}</p>
                     <p className="text-xs text-slate-600 pt-0.5">{skills}</p>
@@ -202,7 +202,7 @@ export default function About() {
       {/* Education */}
       <section className="space-y-5">
         <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest">Education</p>
-        <div className="divide-y divide-white/[0.05]">
+        <div className="divide-y divide-navy-700/60">
           {education.map(({ title, institution, period, note }) => (
             <div key={title} className="py-4 space-y-0.5">
               <p className="text-sm font-semibold text-white leading-snug">{title}</p>
@@ -217,7 +217,7 @@ export default function About() {
       {/* Tools */}
       <section className="space-y-5">
         <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest">Tools & Stack</p>
-        <div className="divide-y divide-white/[0.05]">
+        <div className="divide-y divide-navy-700/60">
           {tools.map(({ category, items }) => (
             <div key={category} className="py-3.5 flex flex-col sm:flex-row sm:gap-6 gap-1 text-sm">
               <span className="text-slate-500 sm:w-32 sm:shrink-0 font-medium">{category}</span>

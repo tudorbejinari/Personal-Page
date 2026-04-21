@@ -20,46 +20,45 @@ const achievements = [
 ]
 
 const styleMap = {
-  blue:   { border: "border-neon-blue/15 hover:border-neon-blue/35",     from: "from-neon-blue/5",   text: "text-neon-blue" },
-  gold:   { border: "border-gold-500/15 hover:border-gold-500/35",       from: "from-gold-500/5",    text: "text-gold-400" },
-  violet: { border: "border-neon-violet/15 hover:border-neon-violet/35", from: "from-neon-violet/5", text: "text-neon-violet" },
+  blue:   { border: "border-sky-500/20 hover:border-sky-500/40",   glow: "from-sky-500/5",   text: "text-sky-400" },
+  gold:   { border: "border-gold-500/20 hover:border-gold-500/40", glow: "from-gold-500/5",   text: "text-gold-400" },
+  violet: { border: "border-violet-500/20 hover:border-violet-500/40", glow: "from-violet-500/5", text: "text-violet-400" },
 }
 
 export default function Home() {
   return (
-    <div className="relative min-h-[90vh] flex flex-col">
+    <div className="relative overflow-hidden">
+      {/* Base hero gradient */}
+      <div className="absolute inset-0 bg-hero-gradient pointer-events-none" />
+      {/* Ambient orbs */}
+      <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-sky-500/10 blur-[120px] pointer-events-none" />
+      <div className="absolute top-20 right-0 w-80 h-80 rounded-full bg-violet-500/8 blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-0 left-1/3 w-64 h-64 rounded-full bg-sky-400/6 blur-[80px] pointer-events-none" />
 
-      {/* Space orbs */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-neon-blue/8 blur-[120px]" />
-        <div className="absolute top-10 right-0 w-[500px] h-[400px] rounded-full bg-neon-violet/6 blur-[100px]" />
-        <div className="absolute bottom-20 left-1/2 w-[400px] h-[300px] -translate-x-1/2 rounded-full bg-neon-blue/5 blur-[90px]" />
-      </div>
-
-      <div className="relative max-w-5xl mx-auto px-6 pt-20 pb-28 sm:pt-32 sm:pb-36 flex-1 flex flex-col justify-center space-y-20 sm:space-y-28">
+      <div className="relative max-w-5xl mx-auto px-6 pt-16 pb-20 sm:pt-24 sm:pb-32 space-y-16 sm:space-y-24">
 
         {/* Hero */}
-        <section className="space-y-8 sm:space-y-10 max-w-3xl">
-          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full text-xs font-semibold bg-emerald-500/8 text-emerald-400 border border-emerald-500/20 tracking-wide">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse-slow" />
+        <section className="max-w-2xl space-y-6 sm:space-y-8">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
             Open to opportunities
           </div>
 
-          <div className="space-y-3">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.08] tracking-tight">
+          <div className="space-y-4">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15] tracking-tight">
               QA Automation
-              <span className="block text-gradient-blue">Engineer</span>
+              <span className="block text-gradient-blue pb-2">Engineer</span>
             </h1>
-            <p className="text-lg sm:text-xl text-slate-400 leading-relaxed font-light max-w-xl pt-2">
+            <p className="text-lg sm:text-xl text-slate-400 leading-relaxed font-light">
               API & UI testing specialist. I build reliable automated test systems
               with Playwright and JavaScript — then use AI to build them faster.
             </p>
           </div>
 
-          <p className="text-slate-500 leading-relaxed text-sm sm:text-base max-w-lg">
-            I work at the intersection of QA engineering and AI — designing infrastructure
-            that scales, integrating automation into CI/CD pipelines, and using the Claude API
-            and Cursor to 10x engineering impact without sacrificing reliability.
+          <p className="text-slate-400 leading-relaxed text-sm sm:text-base">
+            I work at the intersection of QA engineering and AI — designing test infrastructure
+            that scales, integrating automation into CI/CD pipelines, and using tools like
+            Claude API and Cursor to 10x engineering impact without sacrificing reliability.
           </p>
 
           <div className="flex flex-wrap gap-2">
@@ -68,42 +67,43 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3 pt-2">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3 pt-1">
             <Link
               to="/articles"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-neon-blue text-space-950 font-semibold text-sm hover:bg-sky-300 transition-all duration-200 shadow-glow-sm"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-sky-500 text-white font-medium text-sm hover:bg-sky-400 transition-all duration-200 shadow-glow-blue"
             >
               Read My Articles
             </Link>
             <Link
               to="/experience"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-xl glass glass-hover text-slate-300 font-medium text-sm"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg border border-slate-700 text-slate-300 font-medium text-sm hover:border-sky-500/50 hover:text-white hover:bg-white/5 transition-all duration-200"
             >
               View Projects
             </Link>
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-xl glass glass-hover text-slate-300 font-medium text-sm"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg border border-slate-700 text-slate-300 font-medium text-sm hover:border-sky-500/50 hover:text-white hover:bg-white/5 transition-all duration-200"
             >
               Contact Me
             </Link>
           </div>
         </section>
 
-        {/* Key Results */}
+        {/* Achievements */}
         <section className="space-y-5">
-          <p className="text-[11px] font-semibold text-slate-600 uppercase tracking-[0.15em]">Key Results</p>
+          <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest">
+            Key Results
+          </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {achievements.map(({ metric, label, color }) => {
               const s = styleMap[color]
               return (
                 <div
                   key={metric}
-                  className={`relative rounded-2xl border ${s.border} glass p-6 transition-all duration-300 overflow-hidden group`}
+                  className={`rounded-xl border ${s.border} bg-navy-900 p-6 transition-all duration-300 hover:shadow-card bg-gradient-to-br ${s.glow} to-transparent`}
                 >
-                  <div className={`absolute inset-0 bg-gradient-to-br ${s.from} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-                  <p className={`relative text-4xl sm:text-5xl font-bold mb-2 ${s.text}`}>{metric}</p>
-                  <p className="relative text-slate-500 text-sm leading-snug">{label}</p>
+                  <p className={`text-4xl font-bold mb-1.5 ${s.text}`}>{metric}</p>
+                  <p className="text-slate-400 text-sm leading-snug">{label}</p>
                 </div>
               )
             })}

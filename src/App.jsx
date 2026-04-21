@@ -11,7 +11,7 @@ import Contact from "./pages/Contact"
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-space-950 text-slate-100 flex flex-col dot-grid">
+      <div className="min-h-screen bg-navy-950 text-slate-100 flex flex-col">
         <Navbar />
         <main className="flex-1">
           <Routes>

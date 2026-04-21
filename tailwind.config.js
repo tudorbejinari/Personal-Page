@@ -6,44 +6,42 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
+        display: ["Inter", "system-ui", "sans-serif"],
       },
       colors: {
-        space: {
-          950: "#020408",
-          900: "#06101F",
-          800: "#0A1628",
-          700: "#102240",
-          600: "#173058",
+        navy: {
+          950: "#020810",
+          900: "#050D1A",
+          800: "#091525",
+          700: "#0E2040",
+          600: "#143058",
         },
-        neon: {
-          blue: "#38BDF8",
-          cyan: "#00D4FF",
-          violet: "#818CF8",
-          purple: "#A855F7",
+        sky: {
+          400: "#38BDF8",
+          500: "#0EA5E9",
+          600: "#0284C7",
         },
         gold: {
           300: "#FCD34D",
           400: "#FBBF24",
           500: "#F59E0B",
         },
+        violet: {
+          400: "#A78BFA",
+          500: "#8B5CF6",
+        },
       },
       backgroundImage: {
-        "dot-grid": "radial-gradient(rgba(148,163,184,0.06) 1px, transparent 1px)",
-        "hero-glow": "radial-gradient(ellipse 70% 50% at 50% -5%, rgba(56,189,248,0.12) 0%, transparent 65%)",
-        "glow-blue": "radial-gradient(circle, rgba(14,165,233,0.15) 0%, transparent 70%)",
-        "glow-violet": "radial-gradient(circle, rgba(129,140,248,0.12) 0%, transparent 70%)",
-      },
-      backgroundSize: {
-        "dot-lg": "32px 32px",
+        "hero-gradient": "radial-gradient(ellipse 80% 60% at 50% -10%, rgba(14,165,233,0.15) 0%, transparent 70%)",
+        "card-gradient": "linear-gradient(135deg, rgba(14,165,233,0.05) 0%, rgba(139,92,246,0.03) 100%)",
+        "gold-gradient": "linear-gradient(135deg, #F59E0B 0%, #FCD34D 100%)",
+        "blue-gradient": "linear-gradient(135deg, #0EA5E9 0%, #8B5CF6 100%)",
       },
       boxShadow: {
-        "glow-sm": "0 0 0 1px rgba(56,189,248,0.2), 0 4px 16px rgba(56,189,248,0.06)",
-        "glow-md": "0 0 0 1px rgba(56,189,248,0.3), 0 8px 32px rgba(56,189,248,0.1)",
-        "glow-lg": "0 0 0 1px rgba(56,189,248,0.4), 0 16px 48px rgba(56,189,248,0.15)",
-        "card": "0 1px 0 rgba(255,255,255,0.05) inset, 0 1px 3px rgba(0,0,0,0.4)",
-      },
-      animation: {
-        "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "card": "0 1px 3px rgba(0,0,0,0.4), 0 0 0 1px rgba(14,165,233,0.08)",
+        "card-hover": "0 4px 24px rgba(14,165,233,0.12), 0 0 0 1px rgba(14,165,233,0.2)",
+        "glow-blue": "0 0 20px rgba(14,165,233,0.25)",
+        "glow-gold": "0 0 20px rgba(245,158,11,0.25)",
       },
     },
   },
