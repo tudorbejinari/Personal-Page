@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom"
 import TechBadge from "../components/TechBadge"
 
-const stack = ["Playwright", "JavaScript", "Jira", "CI/CD", "AI tools", "Cursor"]
+const stack = [
+  "Playwright", "Cypress", "TestComplete", "JavaScript", "Node.js",
+  "Postman", "Karate", "CI/CD", "Cursor", "Claude CLI",
+]
+
 const achievements = [
   { metric: "80%", label: "Reduction in flaky tests" },
   { metric: "33%", label: "Faster test suite runs" },
-  { metric: "3x", label: "Test coverage speed with AI" },
+  { metric: "10x", label: "Impact with AI-assisted testing" },
 ]
 
 export default function Home() {
@@ -13,19 +17,20 @@ export default function Home() {
     <div className="max-w-5xl mx-auto px-6 py-24 space-y-20">
       <section className="space-y-6 max-w-2xl">
         <div className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-green-900/40 text-green-300 border border-green-800">
-          Available for opportunities
+          Open to opportunities
         </div>
         <h1 className="text-5xl font-bold text-white leading-tight">
-          Senior Software Tester
+          QA Automation Engineer
         </h1>
         <p className="text-xl text-gray-400 leading-relaxed">
-          Focused on automation, efficiency, and AI-assisted testing.
-          I build reliable test systems that ship faster and break less.
+          API & UI testing specialist. I build robust automated test systems
+          using Playwright, Cypress, and JavaScript — and use AI to do it faster.
         </p>
         <p className="text-gray-400 leading-relaxed">
-          5+ years in QA with hands-on experience migrating legacy test suites to Playwright,
-          reducing CI flakiness, and integrating AI tools into daily testing workflows.
-          I care about test quality the same way developers care about code quality.
+          Detail-obsessed engineer with experience across functional, integration, regression,
+          and exploratory testing. I integrate automation into CI/CD pipelines, work closely
+          with DevOps teams, and actively use tools like Cursor and Claude CLI to streamline
+          test creation and boost efficiency. My goal: use AI to 10x my impact, not compete with it.
         </p>
         <div className="flex flex-wrap gap-2 pt-2">
           {stack.map((s) => <TechBadge key={s} label={s} />)}
