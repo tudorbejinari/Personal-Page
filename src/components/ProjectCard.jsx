@@ -19,7 +19,7 @@ export default function ProjectCard({ project }) {
         </div>
       </div>
 
-      <div className="flex flex-nowrap overflow-x-auto gap-1.5 pb-0.5 scrollbar-none">
+      <div className="flex flex-wrap items-center gap-1.5">
         {tools.map((t) => <TechBadge key={t} label={t} />)}
       </div>
 
