@@ -21,7 +21,7 @@ const links = [
 
 export default function Contact() {
   return (
-    <div className="max-w-3xl mx-auto px-6 py-14 sm:py-20 space-y-10 sm:space-y-12">
+    <div className="max-w-5xl mx-auto px-6 py-14 sm:py-20 space-y-10 sm:space-y-12">
       <div className="space-y-3">
         <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest">Contact</p>
         <h1 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">Get In Touch</h1>

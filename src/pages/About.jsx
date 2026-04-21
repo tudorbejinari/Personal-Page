@@ -106,7 +106,7 @@ const tools = [
 
 export default function About() {
   return (
-    <div className="max-w-3xl mx-auto px-6 py-14 sm:py-20 space-y-16 sm:space-y-20">
+    <div className="max-w-5xl mx-auto px-6 py-14 sm:py-20 space-y-16 sm:space-y-20">
 
       {/* Hero intro */}
       <section className="space-y-8">
